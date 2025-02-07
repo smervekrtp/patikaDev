@@ -1,0 +1,43 @@
+patikaDev MergeSort projesi
+
+Birleştirme Sıralama Aşamaları ve Big-O Gösterimi
+Verilen dizi: [16, 21, 11, 8, 12, 22]
+Merge Sort, böl ve yönet bölümüyle çalışan bir programdır. Diziyi sürekli olarak böler, sıralar ve birleştirir.
+
+Birleştir Sırala Aşamaları
+1. Adım – Diziyi İkiye Böl
+
+[16, 21, 11]    |    [8, 12, 22]
+
+2. Adım – Alt Dizileri Tekrar Böl
+
+[16, 21]   [11]    |    [8, 12]   [22]
+
+
+3. Adım – Daha Küçük Parçalara Böl
+
+[16] [21] [11]   |   [8] [12] [22]
+
+
+ Birleştirme (Birleştirme) Aşamaları
+4. Adım – Küçük Dizileri Birleştir ve Sırala
+[16] + [21] → [16, 21]
+[8] + [12] → [8, 12]
+
+5. Adım – Daha Büyük Alt Dizileri Birleştir ve Sırala
+
+[16, 21] + [11] → [11, 16, 21]
+[8, 12] + [22] → [8, 12, 22]
+
+6. Adım – Son Birleştirme İşlemi
+
+[11, 16, 21] + [8, 12, 22] → [8, 11, 12, 16, 21, 22]
+
+Sonuç: Sıralı dizi: [8, 11, 12, 16, 21, 22]
+
+Merge Sort'un Big-O Gösterimi
+Merge Sort'un zaman karmaşıklığı her durumda (en iyi, ortalama, en kötü) O(n log n) 'dir.
+Diziyi her kalan ikiye böldüğümüz için log(n) derinliğinde bir rekürsif çağrı oluşur.
+Onun ayrılma adımı O(n) zaman alır.
+Sonuç:
+Big-O: O(n log n) 
